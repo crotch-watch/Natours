@@ -4,7 +4,8 @@
   "description": "Natours Landing Page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile:sass": "sass sass/main.scss css/style.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/crotch-watch/Natours/issues"
   },
-  "homepage": "https://github.com/crotch-watch/Natours#readme"
+  "homepage": "https://github.com/crotch-watch/Natours#readme",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
 }
