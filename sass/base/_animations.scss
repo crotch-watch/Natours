@@ -1,0 +1,47 @@
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  70% {
+    transform: translateX(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  70% {
+    transform: translateX(-35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
