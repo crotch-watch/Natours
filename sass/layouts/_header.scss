@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 95vh;
+  height: $header-height;
   background-image: linear-gradient(
       /* gradient direction */ to right bottom,
       /* color: initial-position */ rgba($color-primary-light, 0.8),
@@ -12,16 +12,21 @@
 
   /*creates a clipping region that sets what part of an element should be shown. 
   Parts that are inside the region are shown, while those outside are hidden. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% $header-clip-path-distance,
+    0 100%
+  );
 
   &__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
   }
 
   &__logo {
-    height: 35px;
+    height: 3.5rem;
   }
 
   &__text-box {
