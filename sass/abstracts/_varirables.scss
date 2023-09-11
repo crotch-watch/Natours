@@ -2,8 +2,21 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-light-1: #f7f7f7;
 $color-grey-dark: #777;
 $color-white: #fff;
 
 $color-black: #000;
-$header-shadow-black: rgba($color-black, 0.2);
+$color-black-light: rgba($color-black, 0.2);
+
+$grid-width: 114rem;
+$grid-gutter-vertical: 2rem;
+$grid-gutter-horizontal: 4rem;
+
+$header-height: 95vh;
+$header-clip-path-distance: 75vh;
+$about-section-margin-top: calc(
+  (#{$header-height} - #{$header-clip-path-distance}) * -1
+);
+
+$default-font-size: 1.6rem;
