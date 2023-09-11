@@ -3,7 +3,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 5rem;
     transition: all 0.3s;
     position: relative;
   }
@@ -11,7 +11,7 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
-    padding: 15px 25px;
+    padding: 1.5rem 2.5rem;
     display: inline-block;
 
     &::after {
@@ -20,8 +20,8 @@
   }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 20px $header-shadow-black;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.5rem 2rem $color-black-light;
 
     &::after {
       opacity: 0;
@@ -32,7 +32,7 @@
   &:active {
     transform: translateY(0);
     /* box-shadow: x-offset y-offset blur-radius color */
-    box-shadow: 0 5px 15px $header-shadow-black;
+    box-shadow: 0 0.5rem 1.5rem $color-black-light;
   }
 
   &--animated {
@@ -48,11 +48,35 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 5rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: all 0.35s ease-out;
+  }
+}
+.btn-about {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-primary;
+    padding: 1rem;
+    transition: all 0.35s ease-out;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem $color-black-light;
+    border-radius: 2.75rem;
+    transform: translateY(-0.75rem);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
