@@ -34,9 +34,10 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4.25rem;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 0.2rem;
   background-image: linear-gradient(
     to right,
     $color-primary-light,
@@ -55,15 +56,16 @@ body {
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
+  font-size: calc(#{$default-font-size} * 1.1);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: calc(#{$default-font-size} * 1.1);
+  margin-bottom: 5rem;
 
-  &:not(:last-child) {
+  &:last-of-type {
     margin-bottom: 3rem;
   }
 }
