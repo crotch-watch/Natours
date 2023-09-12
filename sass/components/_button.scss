@@ -56,23 +56,24 @@
     transition: all 0.35s ease-out;
   }
 }
+
 .btn-about {
   &:link,
   &:visited {
-    font-size: $default-font-size;
+    font-size: calc(#{$default-font-size} * 1.1);
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
     border-bottom: 0.1rem solid $color-primary;
     padding: 1rem;
-    transition: all 0.35s ease-out;
+    transition: all 0.25s ease-out;
   }
 
   &:hover {
     background-color: $color-primary;
     color: $color-white;
     box-shadow: 0 1rem 2rem $color-black-light;
-    border-radius: 2.75rem;
+    border-radius: 1rem;
     transform: translateY(-0.75rem);
   }
 
