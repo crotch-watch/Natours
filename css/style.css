@@ -88,9 +88,10 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4.25rem;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 0.2rem;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
@@ -104,15 +105,16 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem * 1.1);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem * 1.1);
+  margin-bottom: 5rem;
 }
-.paragraph:not(:last-child) {
+.paragraph:last-of-type {
   margin-bottom: 3rem;
 }
 
@@ -121,7 +123,7 @@ body {
 }
 
 .u-margin-bottom-large {
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 
 .u-margin-bottom-small {
@@ -178,23 +180,57 @@ body {
 }
 
 .btn-about:link, .btn-about:visited {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem * 1.1);
   color: #55c57a;
   display: inline-block;
   text-decoration: none;
   border-bottom: 0.1rem solid #55c57a;
   padding: 1rem;
-  transition: all 0.35s ease-out;
+  transition: all 0.25s ease-out;
 }
 .btn-about:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  border-radius: 2.75rem;
+  border-radius: 1rem;
   transform: translateY(-0.75rem);
 }
 .btn-about:active {
   transform: translateY(0);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 60%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.15s ease-out;
+  outline-offset: 2rem;
+}
+.composition__photo--p1 {
+  top: -2rem;
+  left: 0;
+}
+.composition__photo--p2 {
+  top: 5rem;
+  right: 0;
+}
+.composition__photo--p3 {
+  left: 10%;
+  top: 14rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1) translateY(-1rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  outline: 1.25rem solid #55c57a;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
 }
 
 .header {
@@ -239,22 +275,22 @@ body {
   float: left;
 }
 .grid__row [class^=grid__row--]:not(:last-child) {
-  margin-right: 4rem;
+  margin-right: 5rem;
 }
 .grid__row--half {
-  width: calc((100% - 4rem) / 2);
+  width: calc((100% - 5rem) / 2);
 }
 .grid__row--thirds {
-  width: calc((100% - (4rem * 2)) / 3);
+  width: calc((100% - (5rem * 2)) / 3);
 }
 .grid__row--twoThirds {
-  width: calc((200% - (4rem)) / 3);
+  width: calc((200% - (5rem)) / 3);
 }
 .grid__row--forths {
-  width: calc((100% - (4rem * 3)) / 4);
+  width: calc((100% - (5rem * 3)) / 4);
 }
 .grid__row--threeForths {
-  width: calc((300% - 4rem) / 4);
+  width: calc((300% - 5rem) / 4);
 }
 
 .about-section {
