@@ -1,0 +1,62 @@
+.card {
+  // perspective should be on parent.
+  perspective: 75rem;
+  -moz-perspective: 75rem;
+  position: relative;
+  height: 30rem;
+
+  // The bouncing animation occurs because the hover effect
+  // triggers the transition repeatedly. The cursor leaves
+  // and enters the element while it is moving, causing it
+  // to reverse direction.
+  &__side {
+    background-color: orange;
+    color: $color-white;
+    font-size: 2rem;
+    height: 30rem;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 4rem
+      rgba($color: $color-black, $alpha: 0.3);
+
+    &--back {
+      background-color: #00ffff;
+      transform: rotateY(180deg);
+
+      &-primary {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-secondary {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-tertiary {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
