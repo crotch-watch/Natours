@@ -1,0 +1,26 @@
+.features-card {
+  background-color: rgba($color: $color-white, $alpha: 0.8);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.3);
+  transition: all 0.25s ease-out;
+
+  &__icon {
+    display: inline-block;
+
+    // TODO: try implementing re-usable functionality for gradient {here, typography}
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    font-size: 6rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    transform: scale(1.05) translateY(-1.25rem);
+  }
+}
