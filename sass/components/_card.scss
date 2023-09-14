@@ -10,7 +10,6 @@
   // and enters the element while it is moving, causing it
   // to reverse direction.
   &__side {
-    background-color: orange;
     color: $color-white;
     font-size: 2rem;
     height: 30rem;
@@ -21,12 +20,11 @@
     left: 0;
     width: 100%;
     border-radius: 0.5rem;
-    box-shadow: 0 1.5rem 4rem
-      rgba($color: $color-black, $alpha: 0.3);
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.3);
+    overflow: hidden;
 
     &--back {
-      background-color: #00ffff;
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
 
       &-primary {
         background-image: linear-gradient(
@@ -58,5 +56,59 @@
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 23rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+    &--2 {
+      background-image: url(../img/nat-5.jpg);
+    }
+    &--3 {
+      background-image: url(../img/nat-5.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: right;
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--secondary {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color: $color-secondary-light, $alpha: 0.85),
+        rgba($color: $color-secondary-dark, $alpha: 0.85)
+      );
+    }
+
+    &--primary {
+    }
+    &--tertiary {
+    }
   }
 }
