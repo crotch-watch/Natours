@@ -259,7 +259,6 @@ body {
   height: 30rem;
 }
 .card__side {
-  background-color: orange;
   color: #fff;
   font-size: 2rem;
   height: 30rem;
@@ -271,10 +270,10 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 .card__side--back {
-  background-color: #00ffff;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card__side--back-primary {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
@@ -291,7 +290,41 @@ body {
 .card:hover .card__side--back {
   transform: rotateY(0);
 }
-
+.card__picture {
+  background-size: cover;
+  background-blend-mode: soft-light;
+  height: 23rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+.card__picture--2 {
+  background-image: url(../img/nat-5.jpg);
+}
+.card__picture--3 {
+  background-image: url(../img/nat-5.jpg);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  top: 10rem;
+  right: 2rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--secondary {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
 .header {
   position: relative;
   height: 95vh;
@@ -300,6 +333,7 @@ body {
   background-position: top;
   /*creates a clipping region that sets what part of an element should be shown. 
   Parts that are inside the region are shown, while those outside are hidden. */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 .header__logo-box {
