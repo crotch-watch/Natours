@@ -19,6 +19,17 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1.5rem 2.5rem;
+    display: inline-block;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 1.5rem 2rem $color-black-light;
