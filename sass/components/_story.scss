@@ -1,0 +1,29 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: 0.2);
+  background-color: white;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: calc(#{$default-font-size} * 1.05);
+  transform: skewX(-10deg);
+
+  & > * {
+    transform: skewX(10deg);
+  }
+
+  &__profile-img-container {
+    height: 15rem;
+    width: 15rem;
+    clip-path: circle(50%);
+    float: left;
+
+    // only works => floats, width, height
+    shape-outside: circle(50% at center);
+    transform: translateX(-2.5rem) skewX(10deg);
+  }
+
+  &__profile-img {
+    height: 100%;
+  }
+}
