@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: 0.2);
-  background-color: white;
+  background-color: rgba($color: $color-white, $alpha: 0.4);
   padding: 6rem;
   padding-left: 9rem;
   font-size: calc(#{$default-font-size} * 1.05);
@@ -17,13 +17,40 @@
     width: 15rem;
     clip-path: circle(50%);
     float: left;
-
+    position: relative;
+    
     // only works => floats, width, height
     shape-outside: circle(50% at center);
     transform: translateX(-2.5rem) skewX(10deg);
   }
-
+  
+  // TODO: figure is place incorrectly
   &__profile-img {
     height: 100%;
+    transform: scale(1.25);
+    transition: all 0.5s ease-out;
+  }
+
+  &__profile-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover &__profile-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__profile-img {
+    transform: scale(1);
+    filter: blur(0.5rem) brightness(80%);
   }
 }
