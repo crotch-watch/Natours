@@ -1,0 +1,105 @@
+.form {
+  &__group:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__group:last-of-type {
+    margin-top: 3rem;
+  }
+
+  &__input {
+    font-size: $default-font-size;
+    padding: 1.5rem 2rem;
+    border-radius: $border-radius-small;
+    border: none;
+    border-bottom: 0.4rem solid
+      rgba($color: $color-white, $alpha: 0.5);
+    background-color: rgba($color: $color-white, $alpha: 0.5);
+    font-family: inherit;
+    color: inherit;
+    width: 90%;
+    display: block;
+    transition: all 0.3s ease-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: $box-shadow-small;
+      border-bottom: 0.4rem solid $color-primary-dark;
+    }
+
+    &:focus:invalid {
+      border-bottom: 0.4rem solid red;
+    }
+
+    &::placeholder {
+      color: $color-grey-dark-2;
+      text-transform: capitalize;
+    }
+  }
+
+  &__label {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    display: block;
+    margin-top: 0.75rem;
+    text-transform: capitalize;
+    transition: all 0.3s ease-out;
+    transform: translateY(0);
+  }
+
+  // TODO: look into why this was placed outside of nesting
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  // TODO: look into grid
+  &__radio-group {
+    width: 45%;
+    display: inline-block;
+  }
+
+  &__label-radio {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-btn {
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.45rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  &__input-radio {
+    display: none;
+  }
+
+  // TODO: try reducing syntax
+  &__input-radio:checked + &__label-radio &__radio-btn::after {
+    opacity: 1;
+    background-color: $color-primary;
+  }
+}
