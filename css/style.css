@@ -88,7 +88,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 4.25rem;
+  font-size: 3.75rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -101,7 +101,7 @@ body {
 }
 .heading-secondary:hover {
   transform: skewX(2deg) skewY(10deg) scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 .heading-tertiary {
@@ -126,6 +126,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
 .u-margin-bottom-large {
   margin-bottom: 10rem;
 }
@@ -138,12 +142,14 @@ body {
   margin-top: 10rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 5rem;
   transition: all 0.3s;
   position: relative;
+  border: none;
+  cursor: pointer;
 }
 .btn--white {
   background-color: #fff;
@@ -165,7 +171,7 @@ body {
 }
 .btn:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
 }
 .btn:hover::after {
   opacity: 0;
@@ -174,7 +180,7 @@ body {
 .btn:active {
   transform: translateY(0);
   /* box-shadow: x-offset y-offset blur-radius color */
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
 }
 .btn--animated {
   animation-duration: 0.65s;
@@ -208,7 +214,7 @@ body {
 .btn-about:hover {
   background-color: #55c57a;
   color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
   transform: translateY(-0.75rem);
 }
@@ -444,6 +450,93 @@ body {
   object-fit: cover;
 }
 
+.form__group:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+.form__group:last-of-type {
+  margin-top: 3rem;
+}
+.form__input {
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  border-bottom: 0.4rem solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  color: inherit;
+  width: 90%;
+  display: block;
+  transition: all 0.3s ease-out;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-bottom: 0.4rem solid #28b485;
+}
+.form__input:focus:invalid {
+  border-bottom: 0.4rem solid red;
+}
+.form__input::placeholder {
+  color: #999;
+  text-transform: capitalize;
+}
+.form__label {
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  display: block;
+  margin-top: 0.75rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease-out;
+  transform: translateY(0);
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__radio-group {
+  width: 45%;
+  display: inline-block;
+}
+.form__label-radio {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+.form__radio-btn {
+  height: 3rem;
+  width: 3rem;
+  border: 0.5rem solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.45rem;
+}
+.form__radio-btn::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.form__input-radio {
+  display: none;
+}
+.form__input-radio:checked + .form__label-radio .form__radio-btn::after {
+  opacity: 1;
+  background-color: #55c57a;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -531,6 +624,23 @@ body {
 .stories-section {
   padding: 10rem 0;
   position: relative;
+}
+
+.booking-section {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.booking {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 40% 100%), url(../img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+.booking__form-box {
+  width: 50%;
+  padding: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
