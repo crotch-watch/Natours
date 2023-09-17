@@ -12,6 +12,8 @@ $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
 $color-white: #fff;
 
 $color-black: #000;
@@ -21,13 +23,15 @@ $color-black-light: rgba(
 );
 
 // TODO: add some common box-shadows
-// TODO: re-factor 
+// TODO: re-factor
 
-$box-shadow-medium: 0 2rem 4rem
+$box-shadow-medium: 0 rem 4rem
   rgba(
     $color: $color-black,
     $alpha: 0.4,
   );
+
+$box-shadow-medium-dark: 0 1rem 2rem $color-black-light;
 
 $box-shadow-small: 0 2rem 4rem
   rgba(
