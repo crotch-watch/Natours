@@ -16,6 +16,7 @@
     }
   }
 
+  // TODO: grid__row--half isn't a modifier of grid row.
   &--half {
     width: calc((100% - #{$grid-gutter-horizontal}) / 2);
   }
