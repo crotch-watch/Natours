@@ -1,4 +1,7 @@
 .navigation {
+  height: 100%;
+  width: 100%;
+
   &__bg {
     // TODO: understand why background is sized like this
     width: 6rem;
@@ -16,6 +19,8 @@
   }
 
   &__btn {
+    display: inline-block;
+    text-align: center;
     background-color: $color-white;
     height: 7rem;
     width: 7rem;
@@ -23,7 +28,7 @@
     position: fixed;
     top: 6rem;
     right: 6rem;
-    z-index: 3;
+    z-index: 4;
     box-shadow: 0 1rem 2rem rgba($color: #000, $alpha: 0.2);
   }
 
@@ -33,14 +38,13 @@
 
   &__nav {
     height: 100%;
-    width: 100%;
+    width: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 3;
-    width: 0;
+    transition: all 0.8s;
     opacity: 0;
-    transition: opacity 0.8s
   }
 
   &__list {
@@ -92,9 +96,15 @@
   &__checkbox:checked ~ &__bg {
     transform: scale(67.5);
   }
-
   &__checkbox:checked ~ &__nav {
     width: 100%;
     opacity: 1;
+  }
+
+  &__btn-line {
+    display: block;
+    font-size: 4rem;
+    height: 0.25rem;
+    margin: 0.75rem 0;
   }
 }
