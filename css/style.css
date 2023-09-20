@@ -650,6 +650,10 @@ body {
   width: calc((300% - 6rem) / 4);
 }
 
+.navigation {
+  height: 100%;
+  width: 100%;
+}
 .navigation__bg {
   width: 6rem;
   height: 6rem;
@@ -662,6 +666,8 @@ body {
   transition: transform 0.8s;
 }
 .navigation__btn {
+  display: inline-block;
+  text-align: center;
   background-color: #fff;
   height: 7rem;
   width: 7rem;
@@ -669,22 +675,24 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.navigation__btn:hover {
+  cursor: pointer;
 }
 .navigation__checkbox {
   display: none;
 }
 .navigation__nav {
   height: 100%;
-  width: 100%;
+  width: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 3;
-  width: 0;
+  transition: all 0.8s;
   opacity: 0;
-  transition: opacity 0.8s;
 }
 .navigation__list {
   list-style: none;
@@ -701,6 +709,7 @@ body {
 }
 .navigation__link {
   transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
@@ -729,6 +738,45 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
   opacity: 1;
+}
+.navigation__btn-line {
+  position: relative;
+  margin-top: 3.5rem;
+}
+.navigation__btn-line, .navigation__btn-line::before, .navigation__btn-line::after {
+  transition: transform 0.3s ease-out;
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #333;
+  display: inline-block;
+}
+.navigation__btn-line::before, .navigation__btn-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.navigation__btn-line::before {
+  top: -0.8rem;
+}
+.navigation__btn-line::after {
+  top: 0.8rem;
+}
+.navigation__btn:hover .navigation__btn-line::before {
+  transform: translateY(-0.2rem);
+}
+.navigation__btn:hover .navigation__btn-line::after {
+  transform: translateY(0.2rem);
+}
+.navigation__checkbox:checked + .navigation__btn .navigation__btn-line {
+  background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__btn .navigation__btn-line::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__checkbox:checked + .navigation__btn .navigation__btn-line::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
 .about-section {
