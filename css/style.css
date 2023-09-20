@@ -654,6 +654,10 @@ body {
   height: 100%;
   width: 100%;
 }
+.navigation {
+  height: 100%;
+  width: 100%;
+}
 .navigation__bg {
   width: 6rem;
   height: 6rem;
@@ -668,6 +672,8 @@ body {
 .navigation__btn {
   display: inline-block;
   text-align: center;
+  display: inline-block;
+  text-align: center;
   background-color: #fff;
   height: 7rem;
   width: 7rem;
@@ -675,6 +681,7 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
+  z-index: 4;
   z-index: 4;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
@@ -687,10 +694,13 @@ body {
 .navigation__nav {
   height: 100%;
   width: 0;
+  width: 0;
   position: fixed;
   top: 0;
   right: 0;
+  right: 0;
   z-index: 3;
+  transition: all 0.8s;
   transition: all 0.8s;
   opacity: 0;
 }
