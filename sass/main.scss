@@ -1,13 +1,9 @@
-@import "abstracts/functions", "abstracts/mixins",
-  "abstracts/varirables";
+@import "abstracts/functions", "abstracts/mixins", "abstracts/varirables";
 
-@import "base/base", "base/animations", "base/typograpgy",
-  "base/utilities";
+@import "base/base", "base/animations", "base/typograpgy", "base/utilities";
 
-@import "components/button", "components/composition",
-  "components/features-card", "components/card", "components/story",
-  "components/background-video", "components/form",
-  "components/footer";
+@import "components/button", "components/composition", "components/features-card", "components/card", "components/story",
+  "components/background-video", "components/form", "components/footer", "components/popup";
 
 @import "layouts/header", "layouts/grid", "layouts/navigation";
 
