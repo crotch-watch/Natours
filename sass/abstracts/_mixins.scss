@@ -1,3 +1,5 @@
+// TODO: seperate transform as it can be overridden
+
 @mixin clearfix {
   &::after {
     content: "";
