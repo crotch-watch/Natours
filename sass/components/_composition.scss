@@ -10,25 +10,53 @@
     transition: all 0.15s ease-out;
     outline-offset: 2rem;
 
+    @include responsive($breakpoint-tablet-potrait) {
+      float: left;
+      position: relative;
+      width: 33.33%;
+      box-shadow: 0 1.5rem 3rem rgba($color: $color-black, $alpha: 0.2);
+    }
+
     &--p1 {
       top: -2rem;
       left: 0;
+
+      // TODO: refactor
+      @include responsive($breakpoint-tablet-potrait) {
+        top: 2rem;
+
+        transform: scale(1.3);
+      }
     }
 
     &--p2 {
       top: 6rem;
       right: 5rem;
+
+      @include responsive($breakpoint-tablet-potrait) {
+        top: -1rem;
+        left: 1.5rem;
+
+        transform: scale(1.3);
+        z-index: 2;
+      }
     }
 
     &--p3 {
-      left: 10%;
       top: 14rem;
+      left: 10%;
+
+      @include responsive($breakpoint-tablet-potrait) {
+        left: 0;
+        top: 2rem;
+
+        transform: scale(1.3);
+      }
     }
 
     &:hover {
       transform: scale(1.1) translateY(-1rem);
-      box-shadow: 0 2.5rem 4rem
-        rgba($color: $color-black, $alpha: 0.5);
+      box-shadow: 0 2.5rem 4rem rgba($color: $color-black, $alpha: 0.5);
       z-index: 2;
       outline: 1.25rem solid $color-primary;
     }

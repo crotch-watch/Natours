@@ -13,6 +13,16 @@
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 2;
     transition: transform 0.8s;
+
+    @include responsive($breakpoint-tablet-potrait) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive($breakpoint-mobile) {
+      top: 2.75rem;
+      right: 2.75rem;
+    }
   }
 
   &__btn {
@@ -30,6 +40,16 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    @include responsive($breakpoint-tablet-potrait) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive($breakpoint-mobile) {
+      top: 2.5rem;
+      right: 2.5rem;
     }
   }
 

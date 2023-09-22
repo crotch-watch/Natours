@@ -12,19 +12,9 @@
 
   /*creates a clipping region that sets what part of an element should be shown. 
   Parts that are inside the region are shown, while those outside are hidden. */
-  -webkit-clip-path: polygon(
-    0 0,
-    100% 0,
-    100% $header-clip-path-distance,
-    0 100%
-  );
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% $header-clip-path-distance, 0 100%);
 
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% $header-clip-path-distance,
-    0 100%
-  );
+  clip-path: polygon(0 0, 100% 0, 100% $header-clip-path-distance, 0 100%);
 
   &__logo-box {
     position: absolute;

@@ -2,8 +2,12 @@
   max-width: $grid-width;
   margin: 0 auto;
 
-  &:not(:last-child) {
+  &:not(:last-of-type) {
     margin-bottom: $grid-gutter-vertical;
+
+    @include responsive($breakpoint-tablet-potrait) {
+      margin-bottom: $grid-gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -13,6 +17,15 @@
 
     &:not(:last-child) {
       margin-right: $grid-gutter-horizontal;
+
+      @include responsive($breakpoint-tablet-potrait) {
+        margin-right: 0;
+        margin-bottom: $grid-gutter-vertical-small;
+      }
+    }
+
+    @include responsive($breakpoint-tablet-potrait) {
+      width: 100%;
     }
   }
 
@@ -35,5 +48,9 @@
 
   &--threeForths {
     width: calc((300% - #{$grid-gutter-horizontal}) / 4);
+  }
+
+  @include responsive($breakpoint-tablet-potrait) {
+    max-width: 50rem;
   }
 }

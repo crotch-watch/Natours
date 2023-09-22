@@ -5,19 +5,25 @@
   box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.3);
   transition: all 0.25s ease-out;
 
+  @include responsive($breakpoint-tablet-potrait) {
+    padding: 1.5 0rem;
+    line-height: 1;
+  }
+
   &__icon {
     display: inline-block;
 
     // TODO: try implementing re-usable functionality for gradient {here, typography}
-    background: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
-    font-size: 6rem;
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
+
+    font-size: 6rem;
     color: transparent;
+
+    @include responsive($breakpoint-tablet-potrait) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {

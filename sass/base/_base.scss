@@ -8,10 +8,29 @@
 
 html {
   font-size: 62.5%;
+
+  @include responsive($breakpoint-desktop) {
+    font-size: 75%;
+  }
+
+  @include responsive($breakpoint-tablet-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include responsive($breakpoint-tablet-potrait) {
+    font-size: 50%;
+  }
+
+  @include responsive($breakpoint-mobile) {
+    font-size: 40%;
+  }
 }
 
 body {
   box-sizing: border-box;
   padding: 3rem;
-}
 
+  @include responsive($breakpoint-tablet-potrait) {
+    padding: 0
+  };
+}
