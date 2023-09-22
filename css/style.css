@@ -9,10 +9,35 @@
 html {
   font-size: 62.5%;
 }
+@media (min-width: 112.5rem) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75rem) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25rem) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5rem) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   box-sizing: border-box;
   padding: 3rem;
+}
+@media (max-width: 56.25rem) {
+  body {
+    padding: 0;
+  }
 }
 
 @keyframes moveUp {
@@ -75,6 +100,12 @@ body {
   letter-spacing: 3.5rem;
   animation: 0.85s slideFromLeft ease-out;
 }
+@media (max-width: 37.5rem) {
+  .heading-primary--main {
+    letter-spacing: 1;
+    font-size: 5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -85,6 +116,11 @@ body {
   animation-timing-function: ease-out;
   /* animation-delay: 1s; */
   /* animation-iteration-count: 5; */
+}
+@media (max-width: 37.5rem) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -98,6 +134,16 @@ body {
   background-clip: text;
   color: transparent;
   transition: all 0.3s;
+}
+@media (max-width: 56.25rem) {
+  .heading-secondary {
+    font-size: 2.75rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewX(2deg) skewY(10deg) scale(1.1);
@@ -238,17 +284,46 @@ body {
   transition: all 0.15s ease-out;
   outline-offset: 2rem;
 }
+@media (max-width: 56.25rem) {
+  .composition__photo {
+    float: left;
+    position: relative;
+    width: 33.33%;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
 .composition__photo--p1 {
   top: -2rem;
   left: 0;
+}
+@media (max-width: 56.25rem) {
+  .composition__photo--p1 {
+    top: 2rem;
+    transform: scale(1.3);
+  }
 }
 .composition__photo--p2 {
   top: 6rem;
   right: 5rem;
 }
+@media (max-width: 56.25rem) {
+  .composition__photo--p2 {
+    top: -1rem;
+    left: 1.5rem;
+    transform: scale(1.3);
+    z-index: 2;
+  }
+}
 .composition__photo--p3 {
-  left: 10%;
   top: 14rem;
+  left: 10%;
+}
+@media (max-width: 56.25rem) {
+  .composition__photo--p3 {
+    left: 0;
+    top: 2rem;
+    transform: scale(1.3);
+  }
 }
 .composition__photo:hover {
   transform: scale(1.1) translateY(-1rem);
@@ -267,13 +342,24 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease-out;
 }
+@media (max-width: 56.25rem) {
+  .features-card {
+    padding: 1.5 0rem;
+    line-height: 1;
+  }
+}
 .features-card__icon {
   display: inline-block;
   background: linear-gradient(to right, #7ed56f, #28b485);
-  font-size: 6rem;
   -webkit-background-clip: text;
   background-clip: text;
+  font-size: 6rem;
   color: transparent;
+}
+@media (max-width: 56.25rem) {
+  .features-card__icon {
+    margin-bottom: 0;
+  }
 }
 .features-card:hover {
   transform: scale(1.05) translateY(-1.25rem);
@@ -546,6 +632,11 @@ body {
   text-align: center;
   margin-bottom: 8rem;
 }
+@media (max-width: 56.25rem) {
+  .footer__logo-box {
+    margin-bottom: 0;
+  }
+}
 .footer__logo {
   height: 10rem;
 }
@@ -553,6 +644,12 @@ body {
   padding-top: 2rem;
   border-top: 0.1rem solid #999;
   display: inline-block;
+}
+@media (max-width: 56.25rem) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer__list {
   list-style: none;
@@ -587,6 +684,18 @@ body {
   border-top: 0.1rem solid #999;
   width: 90%;
   float: right;
+}
+@media (max-width: 56.25rem) {
+  .footer__copyright {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+@media (max-width: 56.25rem) {
+  .footer {
+    padding: 8rem 0;
+  }
 }
 
 .popup {
@@ -697,8 +806,13 @@ body {
   max-width: 114rem;
   margin: 0 auto;
 }
-.grid__row:not(:last-child) {
+.grid__row:not(:last-of-type) {
   margin-bottom: 8rem;
+}
+@media (max-width: 56.25rem) {
+  .grid__row:not(:last-of-type) {
+    margin-bottom: 6rem;
+  }
 }
 .grid__row::after {
   content: "";
@@ -710,6 +824,17 @@ body {
 }
 .grid__row [class^=grid__row--]:not(:last-child) {
   margin-right: 6rem;
+}
+@media (max-width: 56.25rem) {
+  .grid__row [class^=grid__row--]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25rem) {
+  .grid__row [class^=grid__row--] {
+    width: 100%;
+  }
 }
 .grid__row--half {
   width: calc((100% - 6rem) / 2);
@@ -725,6 +850,11 @@ body {
 }
 .grid__row--threeForths {
   width: calc((300% - 6rem) / 4);
+}
+@media (max-width: 56.25rem) {
+  .grid__row {
+    max-width: 50rem;
+  }
 }
 
 .navigation {
@@ -742,6 +872,18 @@ body {
   z-index: 2;
   transition: transform 0.8s;
 }
+@media (max-width: 56.25rem) {
+  .navigation__bg {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .navigation__bg {
+    top: 2.75rem;
+    right: 2.75rem;
+  }
+}
 .navigation__btn {
   display: inline-block;
   text-align: center;
@@ -757,6 +899,18 @@ body {
 }
 .navigation__btn:hover {
   cursor: pointer;
+}
+@media (max-width: 56.25rem) {
+  .navigation__btn {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .navigation__btn {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
 }
 .navigation__checkbox {
   display: none;
@@ -857,9 +1011,14 @@ body {
 }
 
 .about-section {
-  background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: calc((95vh - 75vh) * -1);
+  background-color: #f7f7f7;
+}
+@media (max-width: 56.25rem) {
+  .about-section {
+    padding: 20rem 0;
+  }
 }
 
 .features-section {
@@ -872,21 +1031,41 @@ body {
 .features-section > * {
   transform: skewY(4deg);
 }
+@media (max-width: 56.25rem) {
+  .features-section {
+    padding: 10rem 0;
+  }
+}
 
 .tours-section {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -4.9rem;
 }
+@media (max-width: 56.25rem) {
+  .tours-section {
+    padding: 20rem 0 10rem 0;
+  }
+}
 
 .stories-section {
-  padding: 10rem 0;
+  padding: 15rem 0;
   position: relative;
+}
+@media (max-width: 56.25rem) {
+  .stories-section {
+    padding: 10rem 0;
+  }
 }
 
 .booking-section {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+@media (max-width: 56.25rem) {
+  .booking-section {
+    padding: 10rem 0;
+  }
 }
 
 .booking {
