@@ -59,7 +59,7 @@
     &:focus {
       outline: 0.2rem solid $color-primary-dark;
       outline-offset: 1rem;
-      border-radius: 0.5rem;
+      border-radius: $border-radius-normal;;
     }
   }
 

@@ -1,56 +1,61 @@
-.grid__row {
-  max-width: $grid-width;
-  margin: 0 auto;
+.grid {
+  &__row {
+    max-width: $grid-width;
+    margin: 0 auto;
 
-  &:not(:last-of-type) {
-    margin-bottom: $grid-gutter-vertical;
-
-    @include responsive($breakpoint-tablet-potrait) {
-      margin-bottom: $grid-gutter-vertical-small;
-    }
-  }
-
-  @include clearfix;
-
-  [class^="grid__row--"] {
-    float: left;
-
-    &:not(:last-child) {
-      margin-right: $grid-gutter-horizontal;
+    &:not(:last-of-type) {
+      margin-bottom: $grid-gutter-vertical;
 
       @include responsive($breakpoint-tablet-potrait) {
-        margin-right: 0;
         margin-bottom: $grid-gutter-vertical-small;
       }
     }
 
-    @include responsive($breakpoint-tablet-potrait) {
-      width: 100%;
+    @include clearfix;
+
+    [class^="grid__row--"] {
+      float: left;
+
+      &:not(:last-child) {
+        margin-right: $grid-gutter-horizontal;
+
+        @include responsive($breakpoint-tablet-potrait) {
+          margin-right: 0;
+          margin-bottom: $grid-gutter-vertical-small;
+        }
+      }
+
+      @include responsive($breakpoint-tablet-potrait) {
+        width: 100%;
+      }
     }
-  }
 
-  // TODO: grid__row--half isn't a modifier of grid row.
-  &--half {
-    width: calc((100% - #{$grid-gutter-horizontal}) / 2);
-  }
+    &__col {
+      &--half {
+        width: calc((100% - #{$grid-gutter-horizontal}) / 2);
+      }
+    }
 
-  &--thirds {
-    width: calc((100% - (#{$grid-gutter-horizontal} * 2)) / 3);
-  }
+    // TODO: grid__row--half isn't a modifier of grid row.
 
-  &--twoThirds {
-    width: calc(((2 * 100% - (#{$grid-gutter-horizontal})) / 3));
-  }
+    &--thirds {
+      width: calc((100% - (#{$grid-gutter-horizontal} * 2)) / 3);
+    }
 
-  &--forths {
-    width: calc((100% - (#{$grid-gutter-horizontal} * 3)) / 4);
-  }
+    &--twoThirds {
+      width: calc(((2 * 100% - (#{$grid-gutter-horizontal})) / 3));
+    }
 
-  &--threeForths {
-    width: calc((300% - #{$grid-gutter-horizontal}) / 4);
-  }
+    &--forths {
+      width: calc((100% - (#{$grid-gutter-horizontal} * 3)) / 4);
+    }
 
-  @include responsive($breakpoint-tablet-potrait) {
-    max-width: 50rem;
+    &--threeForths {
+      width: calc((300% - #{$grid-gutter-horizontal}) / 4);
+    }
+
+    @include responsive($breakpoint-tablet-potrait) {
+      max-width: 50rem;
+    }
   }
 }

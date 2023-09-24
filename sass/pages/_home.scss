@@ -67,7 +67,7 @@
     url(../img/nat-10.jpg);
   background-size: cover;
   height: 50rem;
-  border-radius: 0.5rem;
+  border-radius: $border-radius-normal;;
   box-shadow: 0rem 2rem 4rem $color-black-light;
 
   &__form-box {

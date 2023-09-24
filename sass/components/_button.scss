@@ -5,30 +5,27 @@
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 5rem;
+    border: none;
     transition: all 0.3s;
     position: relative;
-
-    // NOTE: for button el.
-    border: none;
     cursor: pointer;
   }
 
   &--white {
+    display: inline-block;
+    padding: 1.5rem 2.5rem;
     background-color: $color-white;
     color: $color-grey-dark;
-    padding: 1.5rem 2.5rem;
-    display: inline-block;
-
     &::after {
       background-color: $color-white;
     }
   }
 
   &--green {
-    background-color: $color-primary;
-    color: $color-white;
-    padding: 1.5rem 2.5rem;
     display: inline-block;
+    padding: 1.5rem 2.5rem;
+    color: $color-white;
+    background-color: $color-primary;
 
     &::after {
       background-color: $color-primary;
@@ -76,12 +73,12 @@
 .btn-about {
   &:link,
   &:visited {
-    font-size: calc(#{$default-font-size} * 1.1);
-    color: $color-primary;
     display: inline-block;
+    padding: 1rem;
+    font-size: $default-font-size;
+    color: $color-primary;
     text-decoration: none;
     border-bottom: 0.1rem solid $color-primary;
-    padding: 1rem;
     transition: all 0.25s ease-out;
   }
 

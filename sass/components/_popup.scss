@@ -40,7 +40,7 @@
     height: 50rem;
     background-color: $color-white;
     box-shadow: $box-shadow-small;
-    border-radius: 0.5rem;
+    border-radius: $border-radius-normal;;
     display: table;
     position: absolute;
     transform: translate(-50%, -50%) scale(0.35);
