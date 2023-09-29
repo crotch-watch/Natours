@@ -1,7 +1,7 @@
 .card {
   // perspective should be on parent.
-  perspective: 75rem;
   -moz-perspective: 75rem;
+  perspective: 75rem;
   position: relative;
   height: 50rem;
 
@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-radius: $border-radius-normal;;
+    border-radius: $border-radius-normal;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.3);
     overflow: hidden;
 
@@ -25,25 +25,13 @@
       transform: rotateY(-180deg);
 
       &-primary {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
       }
       &-secondary {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
       &-tertiary {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
     }
   }
@@ -64,11 +52,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 100%);
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        ),
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
         url(../img/nat-5.jpg);
     }
     &--2 {
@@ -102,7 +86,6 @@
   }
 
   &__heading-span {
-    padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
@@ -139,7 +122,6 @@
   &__list-items {
     text-align: center;
     font-size: $default-font-size;
-    padding: 1rem;
 
     &:not(:last-child) {
       border-bottom: 2px solid $color-grey-light-2;

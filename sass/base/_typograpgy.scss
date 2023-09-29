@@ -10,7 +10,6 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  margin-bottom: 6rem;
 
   &--main {
     display: block;
@@ -75,9 +74,5 @@ body {
 
 .paragraph {
   font-size: calc(#{$default-font-size} * 1.1);
-  margin-bottom: 5rem;
-
-  &:last-of-type {
-    margin-bottom: 3rem;
-  }
+  max-width: 85rem;
 }

@@ -1,5 +1,4 @@
 .about-section {
-  padding: 25rem 0;
   margin-top: $about-section-margin-top;
 
   background-color: $color-grey-light-1;
@@ -10,8 +9,7 @@
 }
 
 .features-section {
-  padding: 20rem 0;
-
+  border-radius: $border-radius-large;
   // implement re-usables functionality for below present in {header, home}
   background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
     url(../img/nat-4.jpg);
@@ -31,7 +29,6 @@
 
 .tours-section {
   background-color: $color-grey-light-1;
-  padding: 25rem 0 15rem 0;
   margin-top: -4.9rem;
 
   @include responsive($breakpoint-tablet-potrait) {
@@ -40,7 +37,6 @@
 }
 
 .stories-section {
-  padding: 15rem 0;
   position: relative;
 
   @include responsive($breakpoint-tablet-potrait) {
@@ -49,8 +45,8 @@
 }
 
 .booking-section {
-  padding: 15rem 0;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+  border-radius: $border-radius-large;
 
   @include responsive($breakpoint-tablet-potrait) {
     padding: 10rem 0;
@@ -67,7 +63,7 @@
     url(../img/nat-10.jpg);
   background-size: cover;
   height: 50rem;
-  border-radius: $border-radius-normal;;
+  border-radius: $border-radius-normal;
   box-shadow: 0rem 2rem 4rem $color-black-light;
 
   &__form-box {

@@ -1,6 +1,11 @@
 .header {
+  border-radius: $border-radius-large;
   position: relative;
-  height: $header-height;
+  height: 85vh;
+
+  // TODO: remove header height
+  // height: $header-height;
+
   background-image: linear-gradient(
       /* gradient direction */ to right bottom,
       /* color: initial-position */ rgba($color-primary-light, 0.8),
@@ -16,11 +21,7 @@
   clip-path: polygon(0 0, 100% 0, 100% $header-clip-path-distance, 0 100%);
 
   @media (min-resolution: 192dpi) and (min-width: 75rem) {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
       url(../img/hero-small.jpg);
   }
 

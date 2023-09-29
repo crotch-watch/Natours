@@ -3,8 +3,6 @@
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color: $color-black, $alpha: 0.2);
   background-color: rgba($color: $color-white, $alpha: 0.4);
-  padding: 6rem;
-  padding-left: 9rem;
   font-size: calc(#{$default-font-size} * 1.05);
   transform: skewX(-10deg);
 
@@ -18,12 +16,12 @@
     clip-path: circle(50%);
     float: left;
     position: relative;
-    
+
     // only works => floats, width, height
     shape-outside: circle(50% at center);
     transform: translateX(-2.5rem) skewX(10deg);
   }
-  
+
   // TODO: figure is place incorrectly
   &__profile-img {
     height: 100%;
