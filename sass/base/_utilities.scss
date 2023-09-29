@@ -23,8 +23,44 @@
 }
 
 .center-element {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.section-pad {
+  padding: 15rem 0 !important;
+}
+
+.slice-pad {
+  padding: 8rem;
+}
+
+.text-pad {
+  &-large {
+    padding: 1.5rem 2.5rem !important;
+  }
+
+  &-medium {
+    padding: 1rem 2rem !important;
+  }
+
+  &-small {
+    padding: 1rem !important;
+  }
+}
+
+.margin-bottom {
+  &-large {
+    margin-bottom: 8rem !important;
+  }
+
+  &-medium {
+    margin-bottom: 3rem !important;
+  }
+
+  &-small {
+    margin-bottom: 1.5rem !important;
+  }
 }
