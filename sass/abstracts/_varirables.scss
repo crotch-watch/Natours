@@ -47,20 +47,19 @@ $grid-gutter-horizontal: 6rem;
 
 $header-height: 95vh;
 $header-clip-path-distance: 75vh;
-$about-section-margin-top: calc(
-  (#{$header-height} - #{$header-clip-path-distance}) * -1
-);
+$about-section-margin-top: calc((#{$header-height} - #{$header-clip-path-distance}) * -1);
 
 $default-font-size: 1.6rem;
 
 // Breakpoints
-$breakpoint-mobile: 37.5rem;          // 600px
+$breakpoint-mobile: 37.5rem; // 600px
 $breakpoint-tablet-potrait: 56.25rem; // 900px
-$breakpoint-tablet-landscape: 75rem;  // 1200px
-$breakpoint-desktop: 112.5rem;        // 1800px
+$breakpoint-tablet-landscape: 75rem; // 1200px
+$breakpoint-desktop: 112.5rem; // 1800px
 
 $border-radius-small: 0.3rem;
 $border-radius-normal: 0.5rem;
+$border-radius-large: 0.8rem;
 
 $duration-short: 0.3s;
 $duration-medium: 0.5s;
