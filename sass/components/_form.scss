@@ -1,15 +1,10 @@
 .form {
-  &__group:not(:last-of-type) {
-    margin-bottom: 1.5rem;
-  }
-
   &__input {
     font-size: $default-font-size;
     padding: 1.5rem 2rem;
     border-radius: $border-radius-small;
     border: none;
-    border-bottom: 0.4rem solid
-      rgba($color: $color-white, $alpha: 0.5);
+    border-bottom: 0.4rem solid rgba($color: $color-white, $alpha: 0.5);
     background-color: rgba($color: $color-white, $alpha: 0.5);
     font-family: inherit;
     color: inherit;
