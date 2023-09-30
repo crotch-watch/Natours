@@ -159,32 +159,8 @@ body {
   max-width: 85rem;
 }
 
-.u-center-text {
+.center-text {
   text-align: center !important;
-}
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important;
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
-}
-
-.u-margin-bottom-large {
-  margin-bottom: 10rem !important;
-}
-
-.u-margin-top-small {
-  margin-top: 1.5rem !important;
-}
-
-.u-margin-top-medium {
-  margin-top: 4rem !important;
-}
-
-.u-margin-top-large {
-  margin-top: 10rem !important;
 }
 
 .center-element {
@@ -200,6 +176,13 @@ body {
 
 .slice-pad {
   padding: 8rem;
+}
+
+.card-pad-medium {
+  padding: 4rem;
+}
+.card-pad-small {
+  padding: 2.5rem;
 }
 
 .text-pad-large {
@@ -220,6 +203,16 @@ body {
 }
 .margin-bottom-small {
   margin-bottom: 1.5rem !important;
+}
+
+.margin-top-large {
+  margin-top: 8rem !important;
+}
+.margin-top-medium {
+  margin-top: 3rem !important;
+}
+.margin-top-small {
+  margin-top: 1.5rem !important;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -567,9 +560,6 @@ body {
   object-fit: cover;
 }
 
-.form__group:not(:last-of-type) {
-  margin-bottom: 1.5rem;
-}
 .form__input {
   font-size: 1.6rem;
   padding: 1.5rem 2rem;
